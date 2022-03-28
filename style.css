@@ -7,7 +7,44 @@ body{
     color: rgb(223, 184, 11);
     background-color: rgba(245, 252, 147, 0.623);
 }
-.record{
-    border: 2px; 
-    border-style: solid;
+
+.table-header{
+    color: blue;
+
+}
+
+.main-record{
+    font-size: 40px;
+    border-top: 2px;
+    border-top-color: blue;
+    border-top-style: solid;
+    border-spacing: 20px;
+}
+.record-heading{
+    text-align: center;
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color:blueviolet;
+}
+
+.records{
+    text-align: center;
+}
+
+a:link{
+    text-decoration: None;
+    font-size: large;
+    color:brown;
+}
+a:visited{
+    text-decoration: None;
+    font-size: large;
+    color:brown;
+}
+td:nth-child(odd){
+    color: brown;
+
+}
+td:nth-child(even){
+    color:blue;
 }
