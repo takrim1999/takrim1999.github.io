@@ -1,0 +1,13 @@
+body{
+    font-family: sans-serif;
+    background-color: rgb(215, 255, 255);
+}
+.page-header{
+    font-size: 30;
+    color: rgb(223, 184, 11);
+    background-color: rgba(245, 252, 147, 0.623);
+}
+.record{
+    border: 2px; 
+    border-style: solid;
+}
