@@ -8,16 +8,24 @@ body{
     background-color: rgba(245, 252, 147, 0.623);
 }
 
-.table-header{
-    color: blue;
+.page-main{
+    height: 75%;
+}
 
+.page-footer{
+    text-align:end;
+
+}
+thead{
+    background-color: red;
 }
 
 .main-record{
     font-size: 40px;
-    border-top: 2px;
     border-top-color: blue;
     border-top-style: solid;
+    border-bottom-color: blue;
+    border-bottom-style: solid;
     border-spacing: 20px;
 }
 .record-heading{
