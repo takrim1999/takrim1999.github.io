@@ -3,7 +3,8 @@ body{
     background-color: rgb(215, 255, 255);
 }
 .page-header{
-    font-size: 30;
+    height: 20%;
+    font-size: 300%;
     color: rgb(223, 184, 11);
     background-color: rgba(245, 252, 147, 0.623);
 }
