@@ -13,7 +13,11 @@ body{
 }
 
 .page-footer{
-    text-align:end;
+    /* text-align:end; */
+    font-size: 18;
+    position: absolute;
+    bottom: 0;
+    right: 2%;
 
 }
 thead{
@@ -48,11 +52,4 @@ a:visited{
     text-decoration: None;
     font-size: large;
     color:brown;
-}
-td:nth-child(odd){
-    color: brown;
-
-}
-td:nth-child(even){
-    color:blue;
 }
