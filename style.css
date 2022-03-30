@@ -3,12 +3,13 @@ body{
     background-color: rgb(215, 255, 255);
 }
 .page-header{
-    height: 20%;
-    font-size: 300%;
+    height: 15%;
     color: rgb(223, 184, 11);
     background-color: rgba(245, 252, 147, 0.623);
 }
-
+.page-header h1{
+    font-size: 400%;
+}
 .page-main{
     height: 75%;
 }
