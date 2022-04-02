@@ -1,36 +1,126 @@
+/* Body Start */
 body{
     font-family: sans-serif;
     background-color: rgb(215, 255, 255);
-    background-image: url('/WIFI.png');
+    background-image: url('/WIFI.png');;
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: center;
+    background-size: contain;
+    /* background-position-y: center;
+    background-position-x:10%; */
+    /* background-position-x:10%,90%; */
+    background-repeat: no-repeat
+    /* background-size: 40%; */
 }
+/* Body End */
+
+/* Page Header Start */
 .page-header{
     height: 15%;
-    color: rgb(223, 184, 11);
-    background-color: rgba(245, 252, 147, 0.623);
+    color: rgb(216, 198, 38);
+    background-color: rgba(228, 241, 49, 0.356);
 }
 .page-header h1{
     
     font-size: 70;
 }
-/* .page-main{
+/* Page Header End */
 
-} */
+/* Main Start */
+.page-main{
+    padding-top: 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
 
-.page-footer{
-    /* text-align:end; */
-    font-size: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 2%;
-    color: rgb(0, 0, 0);
+
+.avatar-container{
+    text-align: center;
+    /* background-color: red;  */
+    position: relative;
+}
+.avatar{
+    background-color: rgba(255, 192, 203, 0.603);
+    border: 5px;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: rgb(255, 0, 242);
+    height: 150  
+}
+
+/* Form Start */
+.login-form{
+    text-align: center;
+}
+
+.form-container{
+    text-align: left;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 55%;
+    width: 65%;
+    padding-top: 1%;
+    padding-left : 5%;
+    padding-right: 5%;
+    border: 5px;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: rgb(255, 0, 242);
+}
+.form-container input[type='text'],input[type='password']{
+    font-size: larger;
+    background-color: rgba(255, 255, 255, 0.308);
+    display: inline-block;
+    margin-bottom: 2%;
+    height: 50;
+    width: 100%;
+    border-radius: 5px;
 
 }
+.form-container input[type='button']{
+    background-color: rgba(255, 192, 203, 0.603);
+    height: 50;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bolder;    
+}
+
+.form-container input[type='button']:hover{
+    background-color: rgba(0, 128, 0, 0.5);
+    color: rgb(253, 144, 162);
+}
+
+.form-container input[type='checkbox']{
+    /* display: inline-block; */
+    margin:0;
+    margin-top: 15px;
+    height: 8%;
+    width:20px;
+    text-align: left;
+}
+.form-container label{
+    margin-bottom: 2%;
+    width: 100%;
+    display: inline-block;
+    /* float: left; */
+    /* margin-right:  */
+    font-weight: bolder;
+    font-size: 30;
+}
+.form-container label[name='remember']{
+    /* float: left; */
+    text-align: left;
+    width: auto;
+}
+/* Form End */
+
+/* Table Start */
+
 thead{
     background-color: red;
 }
-
 .main-record{
     font-size: 40px;
     border-top-color: blue;
@@ -50,6 +140,31 @@ thead{
     text-align: center;
 }
 
+/* Table End */
+
+/* Main End */
+
+/* Footer Start */
+.page-footer{
+    text-align:end;
+    font-size: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    color: rgb(0, 0, 0);
+}
+/* Footer End */
+
+/* Link Start */
+.forgot-password{
+    margin-top: 1%;
+    float: right;
+    font-size: larger;
+}
+
+.forgot-password a:link{
+    color: aqua;
+}
 a:link{
     text-decoration: None;
     font-size: large;
@@ -60,3 +175,7 @@ a:visited{
     font-size: large;
     color:brown;
 }
+a:hover{
+    color: rgb(0, 255, 55);
+}
+/* Link End */

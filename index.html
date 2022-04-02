@@ -6,14 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="page-header">
     <h1>TWIFI</h1> 
 </header>
 
+
+
 <main class="page-main">
-<label for="user-name">User Name:</label>
-<label for="password">Password:</label>
+    <form action="data.html" class="login-form">
+        <div class="avatar-container">
+            <img src="/avatar.png"  alt="avatar" class="avatar">
+        </div>
+        <div class="form-container">
+            <label for="uname">Username: </label>
+            <input type="text" name="uname" placeholder="Input Username" required>
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" placeholder="Password" required>
+            <input type="button" value="Login">
+            <input type="checkbox" name="remember" checked>
+            <label name="remember">Remember Me</label>
+            <a class="forgot-password" href="#">Forgot Password?</a>
+        </div>
+    </form>
+    
 
 </main>
 
