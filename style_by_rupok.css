@@ -34,7 +34,7 @@ body{
     
 }
 
-
+/* Avatar Start */
 .avatar-container{
     text-align: center;
     /* background-color: red;  */
@@ -48,7 +48,7 @@ body{
     border-color: rgb(255, 0, 242);
     height: 150  
 }
-
+/* Avatar End */
 /* Form Start */
 .login-form{
     text-align: center;
