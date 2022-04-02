@@ -1,9 +1,8 @@
 /* Body Start */
-/* colors by Areesha Tanjin */
 body{
     font-family: sans-serif;
-    background-color: rgb(73, 49, 70);
-    background-image: url('/wifi2.png');;
+    background-color: rgb(215, 255, 255);
+    background-image: url('/WIFI.png');;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -18,8 +17,8 @@ body{
 /* Page Header Start */
 .page-header{
     height: 12%;
-    color: rgb(42, 23, 38);
-    background-color: rgba(228, 195, 227, 0.555);
+    color: rgb(216, 198, 38);
+    background-color: rgba(228, 241, 49, 0.555);
 }
 .page-header h1{
     
@@ -46,7 +45,7 @@ body{
     border: 5px;
     border-style: solid;
     border-radius: 50px;
-    border-color: rgb(36, 14, 35);
+    border-color: rgb(255, 0, 242);
     height: 150  
 }
 
@@ -68,11 +67,11 @@ body{
     border: 5px;
     border-style: solid;
     border-radius: 50px;
-    border-color: rgb(34, 8, 33);
+    border-color: rgb(255, 0, 242);
 }
 .form-container input[type='text'],input[type='password']{
     font-size: larger;
-    background-color: rgba(90, 50, 83, 0.308);
+    background-color: rgba(255, 255, 255, 0.308);
     display: inline-block;
     margin-bottom: 2%;
     height: 50;
@@ -81,7 +80,7 @@ body{
 
 }
 .form-container input[type='button']{
-    background-color: rgba(90, 83, 89, 0.603);
+    background-color: rgba(255, 192, 203, 0.603);
     height: 50;
     width: 100%;
     font-size: x-large;
@@ -91,7 +90,7 @@ body{
 .form-container input[type='button']:hover{
     /* background-color: rgba(0, 128, 0, 0.5); */
     background-color: rgba(0, 0, 0, 0.466);
-    color: rgb(32, 4, 35);
+    color: rgb(253, 144, 162);
 }
 
 .form-container input[type='checkbox']{
@@ -121,11 +120,11 @@ body{
 /* Table Start */
 
 thead{
-    background-color: rgb(29, 9, 23);
+    background-color: red;
 }
 .main-record{
     font-size: 40px;
-    border-top-color: rgb(8, 8, 33);
+    border-top-color: blue;
     border-top-style: solid;
     border-bottom-color: blue;
     border-bottom-style: solid;
@@ -165,22 +164,22 @@ thead{
 }
 
 .forgot-password a:link{
-    color: rgb(69, 51, 67);
+    color: aqua;
 }
 a:link{
     text-decoration: None;
     font-size: large;
-    color:rgb(195, 200, 223);
+    color:brown;
 }
 a:visited{
     text-decoration: None;
     font-size: large;
-    color:rgb(218, 199, 214);
+    color:brown;
 }
 a:hover{
     text-decoration: dotted;
     font-weight:bolder;
-    color: rgb(5, 2, 8);
+    color: blue;
     /* color: rgb(0, 255, 55); */
 }
 /* Link End */
