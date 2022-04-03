@@ -1,5 +1,8 @@
+/* Designed by Takrim Ul Alam */
+/* colors by Areesha Tanjin (Front End Editor,TSOFT)*/
+
+
 /* Body Start */
-/* colors by Areesha Tanjin */
 body{
     font-family: sans-serif;
     background-color: rgb(73, 49, 70);
@@ -35,7 +38,6 @@ body{
     
 }
 
-
 .avatar-container{
     text-align: center;
     /* background-color: red;  */
@@ -54,13 +56,15 @@ body{
 .login-form{
     text-align: center;
 }
-
+.register-form{
+    text-align: center;
+}
 .form-container{
     text-align: left;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    height: 55%;
+    height: auto;
     width: 65%;
     padding-top: 1%;
     padding-left : 5%;
@@ -85,7 +89,8 @@ body{
     height: 50;
     width: 100%;
     font-size: x-large;
-    font-weight: bolder;    
+    font-weight: bolder;
+    margin-bottom: 1%;    
 }
 
 .form-container input[type='button']:hover{
@@ -169,18 +174,33 @@ thead{
 }
 a:link{
     text-decoration: None;
-    font-size: large;
+    font-size: inherit;
     color:rgb(195, 200, 223);
 }
 a:visited{
     text-decoration: None;
-    font-size: large;
+    font-size: inherit;
     color:rgb(218, 199, 214);
 }
 a:hover{
     text-decoration: dotted;
-    font-weight:bolder;
+    font-weight: bolder;
     color: rgb(5, 2, 8);
     /* color: rgb(0, 255, 55); */
 }
 /* Link End */
+
+/* Alert Start */
+.alert-container{
+    /* position: absolute; */
+    margin-top: 15%;
+    margin-bottom: auto;
+    text-align: center;
+    background-color: rgba(218, 18, 18, 0.521);
+}
+.alert-danger{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100;
+}
+/* Alert End */
