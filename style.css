@@ -37,7 +37,22 @@ body{
     padding-right: 5%;
     
 }
-
+.welcome{
+    background-color: rgba(52, 105, 148, 0.479);
+    color: rgba(81, 165, 42, 0.651);
+}
+.welcome h1{
+    font-size: 80;
+}
+.welcome p{
+    margin-top: -30;
+    font-size: 40;
+}
+.welcome p::first-letter{
+    font-size: 60;
+    font-weight: bolder;
+}
+/* Avatar Start */
 .avatar-container{
     text-align: center;
     /* background-color: red;  */
@@ -52,6 +67,7 @@ body{
     height: 150  
 }
 
+/* Avatar End */
 /* Form Start */
 .login-form{
     text-align: center;
