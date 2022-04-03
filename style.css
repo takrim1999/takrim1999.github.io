@@ -58,9 +58,13 @@ body{
     font-weight: bolder;
 }
 .welcome a:link{
+    font-weight: bold;
     color:rgba(6, 1, 18, 0.674);
 }
-.welcome a:link:hover{
+.welcome a:visited{
+    color:rgba(6, 1, 18, 0.674);
+}
+.welcome a:hover{
     color: rgb(217, 255, 0);
 }
 /* Welcome End */
