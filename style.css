@@ -20,13 +20,20 @@ body{
 
 /* Page Header Start */
 .page-header{
-    height: 12%;
-    color: rgb(42, 23, 38);
+    height: 12%;  
     background-color: rgba(222, 209, 215, 0.555);
 }
 .page-header h1{
-    
+    color: rgb(42, 23, 38);
     font-size: 70;
+    width: fit-content ;
+}
+.page-header h1 a{
+    color: inherit;
+}
+
+.page-header h1:hover{
+    color: yellow;
 }
 /* Page Header End */
 
