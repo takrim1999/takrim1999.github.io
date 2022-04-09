@@ -124,7 +124,7 @@ body{
     border-radius: 5px;
 
 }
-.form-container input[type='button']{
+.form-container input[type='submit']{
     background-color: rgba(90, 83, 89, 0.603);
     height: 50;
     width: 100%;
