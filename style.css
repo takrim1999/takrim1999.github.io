@@ -1,12 +1,11 @@
 /* Designed by Takrim Ul Alam */
 /* colors by Areesha Tanjin (Front End Editor,TSOFT)*/
 
-
 /* Body Start */
 body{
     font-family: sans-serif;
     background-color: rgb(92, 53, 87);
-    background-image: url('/wifi2.png');;
+    background-image: url('wifi2.png');;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -124,7 +123,7 @@ body{
     border-radius: 5px;
 
 }
-.form-container input[type='submit']{
+.form-container input[name='button']{
     background-color: rgba(90, 83, 89, 0.603);
     height: 50;
     width: 100%;
@@ -133,7 +132,7 @@ body{
     margin-bottom: 1%;    
 }
 
-.form-container input[type='button']:hover{
+.form-container input[name='button']:hover{
     /* background-color: rgba(0, 128, 0, 0.5); */
     background-color: rgba(229, 217, 217, 0.466);
     color: rgb(32, 4, 35);
@@ -143,7 +142,7 @@ body{
     /* display: inline-block; */
     margin:0;
     margin-top: 15px;
-    height: 8%;
+    height: 3%;
     width:20px;
     text-align: left;
 }
@@ -164,9 +163,15 @@ body{
 /* Form End */
 
 /* Table Start */
-
-thead{
-    background-color: rgb(29, 9, 23);
+.table-container{
+    /* text-align: center; */
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: auto;
+}
+caption{
+    font-weight: bolder;
+    /* background-color: rgb(29, 9, 23); */
 }
 .main-record{
     font-size: 40px;
