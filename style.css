@@ -1,5 +1,5 @@
 /* Designed by Takrim Ul Alam */
-/* colors by Areesha Tanjin (Front End Editor,TSOFT)*/
+/* colors by Esrat Jahan Esha (Front End Editor,TSOFT)*/
 
 /* Body Start */
 body{
@@ -34,6 +34,47 @@ body{
 .page-header h1:hover{
     color: yellow;
 }
+
+/* Navbar Start */
+
+nav{
+    position: absolute;
+    font-size: xx-large;
+    top: 20;
+    right: 10;
+    color: rgb(15, 0, 22);
+    
+}
+
+nav a{
+    color: rgba(105, 49, 84, 0.501);
+    border: 2px;
+    border-radius: 5px;
+    background-color: rgb(44, 5, 39);
+    border-style:solid; 
+    text-decoration:none ;
+    font-style: inherit;
+}
+
+nav a:hover{
+    color: rgba(207, 189, 197, 0.89);
+    text-decoration:underline;
+
+}
+
+nav a:active{
+    color: rgb(215, 217, 217);
+    text-decoration: none;
+}
+
+/* nav a:visited{
+    color: blueviolet;
+
+} */
+
+
+/* Navbar End */
+
 /* Page Header End */
 
 /* Main Start */
