@@ -1,9 +1,9 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext('2d');
-
 var x = 100;
 var pos = 1;
 var y = 300;
+var t = Date.now();
 function clear(){
     context.clearRect(0,0,600,600);
 }
@@ -34,7 +34,10 @@ function animate(){
     circle();
     x = x + pos;
     y = y - pos*5;
-    
+    context.font = '50px Arial';
+    context.fillText('FPS : '+ Math.round(1/((Date.now()-t)/1000)),0,50);
+    t = Date.now();
+    window.requestAnimationFrame(animate);
 }
 
 // text
@@ -56,4 +59,4 @@ function animate(){
 // setInterval(circle,5);
 // setInterval(text,5);
 
-setInterval(animate,10);
+animate();
