@@ -35,7 +35,7 @@ function animate(){
     x = x + pos;
     y = y - pos*5;
     context.font = '50px Arial';
-    context.fillText('FPS : '+ Math.round(1/((Date.now()-t)/1000)),0,50);
+    context.fillText('RAM : '+ Math.round((1/((Date.now()-t)/1000))/15) + 'GB',0,50);
     t = Date.now();
     window.requestAnimationFrame(animate);
 }
