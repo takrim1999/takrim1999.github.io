@@ -5,8 +5,8 @@ h1{
 }
 #canvas{
     color: black;
-    /* height: 500;
-    width: 600; */
+    height: 100%;
+    width: 100%;
     background:rgba(137, 43, 226, 0.233);
 }
 

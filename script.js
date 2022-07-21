@@ -1,66 +1,44 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext('2d');
-var x = 100;
-var pos = 1;
-var y = 300;
-var t = Date.now();
-var ram = 0;
-var test = 0;
-var a = 5;
+
+const page_width = 1300;
+const page_height = 600;
+
 function clear(){
-    context.clearRect(0,0,600,600);
+    context.clearRect(0,0,page_width,page_height);
 }
 
-function square()
-{
+function text(){
     context.beginPath();
-    context.rect(0,120,600,340);
-    context.fillStyle = "#0a4218";
-    context.stroke()
-    context.fill();
-}
-
-function circle(){
-    context.beginPath();
+    context.font = '42px Arial';
+    context.fillStyle = '#FFFF00'
     context.strokeStyle = 'blue';
-    context.arc(300,y,x,0,Math.PI*2);
-    context.stroke();
-    context.fillStyle = 'blue';
+    context.lineWidth = 2;
+    context.strokeText('Gas',0,500);
     context.fill();
 };
 
-function animate(){
-    time_passed = (Date.now()-t)/1000;
-    if (x>130 || x < 50){
-        pos = pos * (-1*Math.round(60*10*time_passed)/10);
-    }
+context.beginPath();
+var img = new Image();
+// img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg';
+img.src = 'https://i.ibb.co/vvH8pKX/1060466.png';
+// img.onload = 
+start_x =0;
+start_y =250;
+car_height = 60;
+car_width = 80
+function car(){
+context.drawImage(img,start_x,start_y,car_width,car_height);
+};
+var x = 0
+function drive(){
     clear();
-    circle();
-    x = x + pos;
-    y = y - pos*5;
-    context.font = '50px Arial';
-    context.fillText('Frame Rate : '+ Math.round(60*10*time_passed)/10 + 'FPS',0,50);
-    t = Date.now();
-    window.requestAnimationFrame(animate);
+    car();
+    if (start_x < (page_width-car_width)){
+        start_x = start_x + 1;
+    }
 }
 
-// text
-// function text(){
-//     context.beginPath();
-//     context.font = '42px Arial';
-//     context.fillStyle = '#FFFF00'
-//     context.strokeStyle = 'blue';
-//     context.lineWidth = 2;
-//     context.strokeText('Flag',270,500);
-//     context.fill();
-// };
-// context.beginPath();
-// var img = new Image();
-// img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg';
-// context.drawImage(img,250,0,50,50);
-
-// setInterval(square,5);
-// setInterval(circle,5);
-// setInterval(text,5);
-
-animate();
+car();
+text();
+window.onclick = function(){ setInterval(drive,5);};
