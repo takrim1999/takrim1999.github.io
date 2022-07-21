@@ -32,14 +32,14 @@ function circle(){
 function animate(){
     time_passed = (Date.now()-t)/1000;
     if (x>130 || x < 50){
-        pos = pos * (-1*(60*time_passed));
+        pos = pos * (-1*Math.round(60*10*time_passed)/10);
     }
     clear();
     circle();
     x = x + pos;
     y = y - pos*5;
     context.font = '50px Arial';
-    context.fillText('Frame Rate : '+ (60*time_passed) + 'FPS',0,50);
+    context.fillText('Frame Rate : '+ Math.round(60*10*time_passed)/10 + 'FPS',0,50);
     t = Date.now();
     window.requestAnimationFrame(animate);
 }
