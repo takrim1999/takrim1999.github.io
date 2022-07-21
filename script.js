@@ -31,14 +31,24 @@ function car(){
 context.drawImage(img,start_x,start_y,car_width,car_height);
 };
 var x = 0
+var dir = 0;
 function drive(){
     clear();
     car();
-    if (start_x < (page_width-car_width)){
-        start_x = start_x + 1;
-    }
+    // if (start_x < (page_width-car_width)){
+    start_x = start_x + dir;
+    // }
+    requestAnimationFrame(drive)
 }
 
+up = document.getElementById('up');
+down = document.getElementById('down');
+left = document.getElementById('left');
+right = document.getElementById('right');
+
+
 car();
-text();
-window.onclick = function(){ setInterval(drive,5);};
+// window.onclick = function(){ setInterval(drive,5);};
+drive();
+right.onclick = function() { dir = dir + 1 ;};
+left.onclick = function() { dir = dir - 1 ;};

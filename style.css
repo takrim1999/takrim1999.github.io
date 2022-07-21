@@ -10,6 +10,9 @@ h1{
     background:rgba(137, 43, 226, 0.233);
 }
 
+table{
+    text-align: center;
+}
 /* #some {
 color : #0a4218;
 } */
