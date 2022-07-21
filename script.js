@@ -4,6 +4,9 @@ var x = 100;
 var pos = 1;
 var y = 300;
 var t = Date.now();
+var ram = 0;
+var test = 0;
+var a = 5;
 function clear(){
     context.clearRect(0,0,600,600);
 }
@@ -35,7 +38,7 @@ function animate(){
     x = x + pos;
     y = y - pos*5;
     context.font = '50px Arial';
-    context.fillText('RAM : '+ Math.round((1/((Date.now()-t)/1000))/15) + 'GB',0,50);
+    context.fillText('Frame Rate : '+ Math.round(1/((Date.now()-t)/1000)) + 'FPS',0,50);
     t = Date.now();
     window.requestAnimationFrame(animate);
 }
