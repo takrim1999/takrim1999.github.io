@@ -32,5 +32,6 @@ td:hover{
     background-color: rgb(43, 198, 226);
 }
 td:active{
-    background-color: rgb(43, 198, 226);
+    color:rgb(68, 8, 8);
+    text-decoration:double;
 }
