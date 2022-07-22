@@ -1,18 +1,20 @@
-h1{
-    width: fit-content;
-    height: fit-content;
-    color: brown;
-}
 #canvas{
-    color: black;
+    position: relative;
+    background-image: url('america.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100%;
     width: 100%;
-    background:rgba(137, 43, 226, 0.233);
+    background-color : rgb(201, 136, 255);
 }
-
-table{
+#control{
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    color: rgb(199, 186, 0);
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
 }
-/* #some {
-color : #0a4218;
-} */

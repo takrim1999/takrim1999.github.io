@@ -1,54 +1,15 @@
-var canvas = document.getElementById("canvas");
-var context = canvas.getContext('2d');
-
-const page_width = 1300;
-const page_height = 600;
-
-function clear(){
-    context.clearRect(0,0,page_width,page_height);
-}
-
-function text(){
-    context.beginPath();
-    context.font = '42px Arial';
-    context.fillStyle = '#FFFF00'
-    context.strokeStyle = 'blue';
-    context.lineWidth = 2;
-    context.strokeText('Gas',0,500);
-    context.fill();
+canvas = document.getElementById('canvas');
+context = canvas.getContext('2d');
+var img_main = new Image();
+img_main.src = './main.png';
+var img_horny = new Image();
+img_horny.src = './horny.png';
+function load_avatar(){
+img_main.onload = function(){context.drawImage(img_main, 20, 20, 50, 50);};
 };
-
-context.beginPath();
-var img = new Image();
-// img.src = 'https://blob.sololearn.com/avatars/sololearn.jpg';
-img.src = 'https://i.ibb.co/vvH8pKX/1060466.png';
-// img.onload = 
-start_x =0;
-start_y =250;
-car_height = 60;
-car_width = 80
-function car(){
-context.drawImage(img,start_x,start_y,car_width,car_height);
+function make_horny(){
+    img_horny.onload = function(){context.drawImage(img_horny, 20, 20, 50, 50);};
 };
-var x = 0
-var dir = 0;
-function drive(){
-    clear();
-    car();
-    // if (start_x < (page_width-car_width)){
-    start_x = start_x + dir;
-    // }
-    requestAnimationFrame(drive)
-}
-
-up = document.getElementById('up');
-down = document.getElementById('down');
-left = document.getElementById('left');
-right = document.getElementById('right');
-
-
-car();
-// window.onclick = function(){ setInterval(drive,5);};
-drive();
-right.onclick = function() { dir = dir + 1 ;};
-left.onclick = function() { dir = dir - 1 ;};
+    
+// load_avatar();
+// make_horny();
