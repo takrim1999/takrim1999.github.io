@@ -22,10 +22,10 @@ function game() {
     guessField.onclick = () => location.reload();
     window.onkeydown = () => location.reload();
   } else if (number > guessField.value) {
-    messageField.innerHTML = "Guessed Bigger!";
+    messageField.innerHTML = "I Guessed Bigger!";
     messageField.className = "card-footer text-center text-warning";
   } else if (number < guessField.value) {
-    messageField.innerHTML = "Guessed Smaller!";
+    messageField.innerHTML = "I Guessed Smaller!";
     messageField.className = "card-footer text-center text-warning";
   }
   if (attempt == 1) {
