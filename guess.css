@@ -1,0 +1,17 @@
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+input.short {
+    width: 250px;
+}
+
+.card {
+    background-color: aliceblue;
+    vertical-align: bottom;
+}
+
+.alert {
+    font-size: 80px;
+}

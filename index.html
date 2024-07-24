@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gueesing Game</title>
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="guess.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-primary text-center alert">Welcome to guessing game</h1>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <canvas id="cakeCanvas" width="340%" height="500%"></canvas>
-    <script src="script.js"></script>
-</body>
-
+      <div class="card container-fluid">
+        <h1 class="card-header text-center text-secondary">
+          <label for="guess">Guess:</label>
+          <input
+            class="container short"
+            name="guess"
+            id="guess"
+            type="number"
+          />
+          <button id="try" class="btn btn-lg btn-success">try</button>
+        </h1>
+        <span id="over">
+          <h1 class="text-center text-secondary" id="last">
+            Attempt Left:
+            <span id="attempts" class="text-success"></span>
+          </h1>
+          <h1 id="message" class="card-footer text-center text-info">
+            Welcome! <span id="lastGuess"></span>
+          </h1>
+        </span>
+      </div>
+    </div>
+    <div class=".progress-bar-animated"></div>
+    <script src="guess.js"></script>
+    <script src="../bootstrap.bundle.js"></script>
+  </body>
 </html>
