@@ -35,7 +35,7 @@
             background-color: var(--bg-light); /* Use light gray for body background */
         }
 
-        h1, h2, h3, h4 { /* Added h4 */
+        h1, h2, h3 {
             color: var(--primary); /* Use primary color for headers */
             margin-bottom: 1rem;
         }
@@ -54,25 +54,6 @@
              width: fit-content; /* Adjust width to content */
              margin-left: auto;
              margin-right: auto;
-        }
-
-        /* Style for Category Subheadings (h4) */
-        .category-title {
-            font-size: 1.6rem;
-            margin-top: 2.5rem; /* Space above category title */
-            margin-bottom: 1.5rem; /* Space below category title */
-            padding-bottom: 0.3rem;
-            border-bottom: 2px solid var(--primary); /* Primary color border */
-            color: var(--primary);
-            display: inline-block;
-        }
-        /* Ensure category titles are not centered like h2 */
-        section > .category-title {
-             display: block;
-             width: auto;
-             margin-left: 0;
-             margin-right: 0;
-             text-align: left;
         }
 
 
@@ -266,12 +247,10 @@
             background: var(--light); /* White background */
         }
 
-        /* Grid specific for project cards within a category */
-        .projects-category-grid {
+        .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 2rem; /* Space below each category grid */
         }
 
         .project-card {
@@ -305,10 +284,9 @@
             flex-direction: column;
         }
 
-        .project-content h3 { /* Changed from h3 to h5 for card title */
+        .project-content h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: var(--primary); /* Ensure card title color */
         }
 
         .project-date {
@@ -333,17 +311,6 @@
          .project-links a i {
              margin-right: 0.3rem;
          }
-
-        /* Participation/Activities Section */
-        #participation {
-             background: var(--bg-light); /* Light background */
-        }
-        /* Using project card style for activities */
-        .activities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
 
 
         /* Education Section */
@@ -380,16 +347,14 @@
 
 
         /* Certifications Section */
-        #certs { /* Renamed from #certifications */
+        #certifications {
             background: var(--light); /* White background */
         }
 
-        /* Grid specific for cert cards within a category */
-        .certs-category-grid {
+        .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 2rem; /* Space below each category grid */
         }
 
         .cert-card {
@@ -405,10 +370,10 @@
              box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        .cert-card h3 { /* Changed from h3 to h5 for card title */
+        .cert-card h3 {
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
-            color: var(--primary); /* Ensure card title color */
+            color: var(--primary);
         }
         .cert-card p {
              font-size: 0.9rem;
@@ -512,12 +477,8 @@
                 font-size: 1.8rem;
                 margin-bottom: 2rem;
             }
-             /* Adjust category title size on mobile */
-            .category-title {
-                 font-size: 1.4rem;
-            }
 
-            .skills-grid, .projects-category-grid, .certs-category-grid, .activities-grid { /* Updated grids */
+            .skills-grid, .projects-grid, .cert-grid {
                 grid-template-columns: 1fr; /* Stack grids on mobile */
                 gap: 1.5rem;
             }
@@ -542,7 +503,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#participation">Participation</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#certs">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -583,8 +543,8 @@
                         <ul class="skills-list">
                             <li>Python</li>
                             <li>JavaScript</li>
-                            <li>C</li>
-                            <li>Bash</li>
+                            <li>C programming</li>
+                            <li>Shell programming</li>
                             <li>Java</li>
                         </ul>
                     </div>
@@ -593,22 +553,19 @@
                         <ul class="skills-list">
                             <li>Django</li>
                             <li>Flask</li>
-                            <li>React</li></ul>
+                            <li>HTML</li> <li>CSS</li> </ul>
                     </div>
                     <div class="skill-category">
                         <h3><i class="fas fa-brain"></i>Machine Learning</h3>
                         <ul class="skills-list">
-                            <li>ML</li>
-                            <li>DL</li>
-                            <li>Computer Vision</li>
-                            <li>OpenCV</li>
-                            <li>YOLO</li>
+                            <li>ML Concepts</li>
+                            <li>Computer Vision Basics</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3><i class="fas fa-cogs"></i>Other Skills</h3>
                         <ul class="skills-list">
-                            <li>GIT</li>
+                            <li>MS Office</li>
                             <li>Cyber Security</li>
                             <li>Linux OS</li>
                             <li>Networking</li>
@@ -620,10 +577,8 @@
 
         <section id="projects">
             <div class="container">
-                <h2>Projects</h2>
-                <br>
-                <h4 class="category-title">Web Development</h4>
-                <div class="projects-category-grid">
+                <h2>Projects & Activities</h2>
+                <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image">
                             <img src="images/twifi.png" alt="TWIFI Project">
@@ -636,144 +591,65 @@
                                 </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/ruiceaa.png" alt="ICE Alumi Web Dev project">
-                        </div>
-                        <div class="project-content">
-                            <h3>ICE Alumi Web Development Project for University of Rajshahi</h3>
-                            <p class="project-date">Date</p>
-                            <p class="project-description">Directed and distributed project between Frontend Leader and Backend Leader. Integrated, Deployed and also programmed backend</p>
-                            <div class="project-links">
-                                <a href="https://ice-alumni-webdev.vercel.app/">view</a>
-                                <a href="https://iceru.pythonanywhere.com/">backend</a>
-                                </div>
-                        </div>
-                    </div>
-                </div>
 
-                <h4 class="category-title">AI & Machine Learning</h4>
-                <div class="projects-category-grid">
                     <div class="project-card">
                          <div class="project-image">
-                            <img src="images/tictactoeai.png" alt="TicTacToe AI Project">
-                        </div>
-                        <div class="project-content">
-                            <h3>TicTacToe with AI</h3>
-                            <p class="project-date">Sep 30, 2022</p>
-                            <p class="project-description">Developed a TicTacToe game featuring an AI opponent with adaptive learning capabilities. The AI improves its strategy after each game.</p>
-                             <div class="project-links">
-                                 </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                           <img src="images/dengue.png" alt="Dengue ML,DL classification">
-                       </div>
-                    <div class="project-content">
-                        <h3>Machine Learning and Deep Learning for Dengue Classification</h3>
-                        <p class="project-date">Mar 02, 2025</p>
-                        <p class="project-description">Handling Imbalanced Datasets
-                            with Real-World Positive Cases. Cleaned data, visualized them, trained model and analyzed the result.</p>
-                         <div class="project-links">
-                             </div>
-                    </div>
-                    </div>
-                    </div>
-                 <h4 class="category-title">Cyber Security</h4>
-                <div class="projects-category-grid">
-                     <div class="project-card">
-                         <div class="project-image">
-                             <img src="images/vulnerable.png" alt="Vulnerability Analysis Project">
+                            <img src="images/vulnerable.png" alt="Vulnerability Analysis Project">
                         </div>
                         <div class="project-content">
                             <h3>Vulnerability Analysis</h3>
                             <p class="project-date">Jan 13, 2023</p>
-                            <p class="project-description">Conducted a security analysis focusing on a sample of Facebook users in Bangladesh. Identified and reported vulnerabilities.</p>
+                            <p class="project-description">Conducted a security analysis focusing on a sample of Facebook users in Bangladesh. Identified vulnerabilities in several accounts, which were subsequently reported to and resolved by Facebook.</p>
                              <div class="project-links">
                                 </div>
                         </div>
                     </div>
-                    </div>
 
-                 <h4 class="category-title">Automation & Scripting</h4>
-                <div class="projects-category-grid">
-                     <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/result.png" alt="Shell App - Result Fetcher">
-                       </div>
-                       <div class="project-content">
-                           <h3>Shell App (Result Fetcher)</h3>
-                           <p class="project-date">Feb 1, 2021</p>
-                           <p class="project-description">Developed an app to fetch a board exam result by bypassing captcha.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/takrim1999/hsc">View Repository</a>
-                                </div>
-                       </div>
-                   </div>
                     <div class="project-card">
                          <div class="project-image">
-                            <img src="images/shellfb.png" alt="Facebook Shell App Project">
+                            <img src="https://placehold.co/600x400/2a2a72/ffffff?text=TicTacToe" alt="TicTacToe AI Project">
                         </div>
                         <div class="project-content">
-                            <h3>Facebook Shell App</h3>
-                            <p class="project-date">Jun 7, 2021</p>
-                            <p class="project-description">Created a shell application to automate various Facebook actions using the Scrapy framework.</p>
+                            <h3>TicTacToe with AI</h3>
+                            <p class="project-date">Sep 30, 2022</p>
+                            <p class="project-description">Developed a TicTacToe game featuring an AI opponent with adaptive learning capabilities. The AI improves its strategy after each game, aiming to eliminate losing possibilities.</p>
                              <div class="project-links">
                                  </div>
                         </div>
                     </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                           <img src="images/result.png" alt="Shell App">
+                       </div>
+                       <div class="project-content">
+                           <h3>Shell App</h3>
+                           <p class="project-date">Feb 1, 2021</p>
+                           <p class="project-description">Developed an app to fetch a board exam result by bypassing captcha.</p>
+                            <div class="project-links">
+                                </div>
+                       </div>
+                   </div>
+
+                    <div class="project-card">
+                         <div class="project-image">
+                            <img src="https://placehold.co/600x400/FF6B6B/ffffff?text=FB+Shell" alt="Facebook Shell App Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Facebook Shell App</h3>
+                            <p class="project-date">Jun 7, 2021</p>
+                            <p class="project-description">Created a shell application to automate various Facebook actions like status updates, comments, reactions, ID searching, and messaging, utilizing the Scrapy framework.</p>
+                             <div class="project-links">
+                                 </div>
+                        </div>
                     </div>
 
-            </div>
-        </section>
-
-        <section id="participation">
-            <div class="container">
-                <h2>Participation & Activities</h2>
-                <div class="activities-grid"> <div class="project-card"> <div class="project-image">
+                     <div class="project-card"> <div class="project-image">
                             <img src="images/foobar1.png" alt="Google Foobar">
                         </div>
                         <div class="project-content">
                             <h3><i class="fab fa-google" style="color: var(--primary); margin-right: 0.5rem;"></i>Google Foobar Challenge</h3>
-                            <!-- <p class="project-date">Date of Event</p> -->
-                            <p class="project-description">Participated in Google's invite-only Foobar challenge, a series of programming puzzles. Successfully solved 5 problems.</p>
-                             <div class="project-links">
-                                </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/edge.png" alt="Edge Project">
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="https://edge.gov.bd/" style="color: #2a2a72;">Edge Project</a></h3>
-                            <p class="project-date">21 Oct, 2024 - 30 Dec, 2025</p>
-                            <p class="project-description">A project launched by GOB to fine tune technical skills among school, college, university students. Attented to learn python and AI basics</p>
-                             <div class="project-links">
-                                </div>
-                        </div>
-                    </div>
-                     <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/learnathon.jpeg" alt="Learnathon 3.0">
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="https://learnathon.geeky.solutions/" style="color: #2a2a72;">Leranathon 3.0 by Geeky Solution</a></h3>
-                            <p class="project-date">20 Dec, 2024 - Present</p>
-                            <p class="project-description">This is a developer hunt program conducted by geeky solution and 3.0 is sponsored by Brainstation 23. I am leading the team SegFault to create our online judge CodeSirius</p>
-                             <div class="project-links">
-                                </div>
-                        </div>
-                    </div>
-                     <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/bdset.jpg" alt="BDSET">
-                        </div>
-                        <div class="project-content">
-                            <h3><a href="https://bhtpa.gov.bd/site/page/db916efe-105a-4301-acba-2dcfd02fac15/BDSET-Project" style="color: #2a2a72;">BDSET Project</a></h3>
-                            <p class="project-date">20 Jan, 2025 - Present</p>
-                            <p class="project-description">Bangladesh-Bharot Digital Service & Employment Training Center. Learning about AI, ML, DL, AR, VR, MR, XR</p>
+                            <p class="project-description">Participated in Google's invite-only Foobar challenge, a series of programming puzzles designed to identify potential engineering talent. Successfully solved 5 problems during the session.</p>
                              <div class="project-links">
                                 </div>
                         </div>
@@ -804,123 +680,35 @@
              </div>
         </section>
 
-        <section id="certs"> <div class="container">
+        <section id="certs">
+            <div class="container">
                 <h2>Certifications</h2>
-                <br>
-                <h4 class="category-title">Automation</h4>
-                 <div class="certs-category-grid">
-                     <div class="cert-card">
-                        <!-- <i class="fas fa-robot"></i> -->
-                        <div class="project-image">
-                            <img src="images/google.png" alt="BDSET">
-                        </div>
-                        <h3>Coursera certificates from python automation course by google</h3>
-                        <ul class="container">
-                            <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/professional-cert/FEDM8NNZLSQ2">Google IT Automation Professional Certificate</a></li>
-                            <div class="container">
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/DRMJTB2QF4TA">Crash Course on Python</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/7TV2MKMZVL5D">Using Python to Interact with the Operating System</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/BL8WT6KEHKEU">Troubleshooting and Debugging Techniques</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://oursera.org/verify/DEHKLYCBJH2N">Conﬁguration Management and the Cloud</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/EECV2X68WG2V">Automating Real-World Tasks with Python</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                     <div class="cert-card">
-                        <div class="project-image">
-                            <img src="images/coursera.png" alt="BDSET">
-                        </div>
-                        <h3>Coursera Guided Project on Bash</h3>
-                        <ul class="container">
-                            <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/TT2G68YKPSX7">Automation Scripts Using Bash</a></li>
-                        </ul>
-                    </div>
-                    </div>
-
-                 <h4 class="category-title">Cyber Security & IT Support</h4>
-                 <div class="certs-category-grid">
-
+                <div class="cert-grid">
                     <div class="cert-card">
-                        <div class="project-image">
-                            <img src="images/google.png" alt="BDSET">
+                        <i class="fas fa-tools"></i> <h3>Google IT Support Specialization</h3>
+                        <p>Verify ID: MNZ8SWKYC8TS</p>
                         </div>
-                        <h3>IT Support Specialization offered by google</h3>
-                        <ul class="container">
-                            <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/professional-cert/MNZ8SWKYC8TS">Google IT Support</a></li>
-                            <div class="container">
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/ZPLPB5ZESYC4">Technical Support Fundamentals</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/UN9YU92F2AKX">The Bits and Bytes of Computer Networking</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/9RMZXGJDJ467">Operating Systems and You: Becoming a Power User</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/V8N24MUZGW4H">System Administration and IT Infrastructure Services</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/M55CYLYNNVF9">IT Security: Defense against the digital dark arts</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="cert-card">
-                        <div class="project-image">
-                            <img src="images/google.png" alt="BDSET">
-                        </div>
-                        <h3>Networks and Network Security course by Google</h3>
-                        <ul class="container">
-                            <div class="container">
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/XMYNVBFTVPRP">Foundations of Cybersecurity</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/MVUY2TDQ7ND9">Play It Safe: Manage Security Risks</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="http://coursera.org/verify/PK7T9J99354W">Connect and Protect: Networks and Network Security</a></li>
-                            <li style="text-align: left; list-style:circle"><a target="_blank" href="http://coursera.org/verify/KQEMM5E8XSSB">Tools of the Trade: Linux and SQL</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                    </div>
-
-                 <h4 class="category-title">Programming Languages</h4>
-                 <div class="cert-card">
-                    <div class="project-image">
-                        <img src="images/michigan.jpg" alt="BDSET">
-                    </div>
-                    <h3>Python Programming Specialization offered by University of Michigan</h3>
-                    <ul class="container">
-                        <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/specialization/KNEZVNSFSDWJ">Python for Everybody</a></li>
-                        <div class="container">
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/LJJT3GYY9J7H">Programming for Everybody (Getting Started with Python)</a></li>
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/3W84KSCZ6C8E">Python Data Structures</a></li>
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/3Z5FNB9MKKDH">Using Python to Access Web Data</a></li>
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/7U4Q3NJXWBNY">Using Databases with Python</a></li>
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/WVFPXWJHJSUL">Capstone: Retrieving, Processing, and Visualizing Data with Python</a></li>
-                        </div>
-                    </ul>
-                </div>
-
-                <h4 class="category-title">Mathematics</h4>
-                 <div class="cert-card">
-                    <div class="project-image">
-                        <img src="images/sandiego.png" alt="BDSET">
-                    </div>
-                    <h3>Discrete Mathematics for Computer Science Specialization offered by University of California, San Diego</h3>
-                    <ul class="container">
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/W24KQ74M3NN7">Mathematical Thinking in Computer Science</a></li>
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/MLFG959H8N2B">Combinatorics and Probability</a></li>
-                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/KMYBBW6XSJD6">Introduction to Graph Theory</a></li>
-                    </ul>
-                </div>
-
-                 <!-- <h4 class="category-title">Web Development</h4>
-                 <div class="certs-category-grid">
                      <div class="cert-card">
-                        <i class="fas fa-certificate"></i>
-                        <h3>Web Dev Certificate</h3>
-                        <p>Add details here</p>
+                        <i class="fab fa-python"></i> <h3>Python for Everybody Specialization</h3>
+                        <p>Verify ID: KNEZVNSFSDWJ</p>
                     </div>
-                    </div>
-
-                 <h4 class="category-title">AI & Machine Learning</h4>
-                 <div class="certs-category-grid">
                      <div class="cert-card">
-                        <i class="fas fa-brain"></i>
-                        <h3>AI Certificate</h3>
-                        <p>Add details here</p>
+                        <i class="fas fa-robot"></i> <h3>Google IT Automation Professional Certificate</h3>
+                        <p>Verify ID: FEDM8NNZLSQ2</p>
                     </div>
+                     <div class="cert-card">
+                        <i class="fas fa-network-wired"></i> <h3>Networks and Network Security</h3>
+                        <p>Verify ID: PK7T9.99354W</p>
+                    </div>
+                     <div class="cert-card">
+                        <i class="fas fa-terminal"></i> <h3>Automation Scripts Using Bash</h3>
+                        <p>Verify ID: TT2G68YKPSX7</p>
+                    </div>
+                     <!-- <div class="cert-card">
+                        <i class="fas fa-certificate"></i> <h3>More Certifications</h3>
+                        <p>Add details here</p>
                     </div> -->
-
+                </div>
             </div>
         </section>
 
