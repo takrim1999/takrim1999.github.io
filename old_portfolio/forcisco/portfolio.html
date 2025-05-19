@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Takrim Ul Alam - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #2a2a72; /* Deep Blue */
+            --accent: #FF6B6B;  /* Coral Red */
+            --dark: #1a1a1a;   /* Very Dark Gray */
+            --light: #ffffff;  /* White */
+            --bg-light: #f8f9fa; /* Light Gray Background */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--bg-light); /* Use light gray for body background */
+        }
+
+        h1, h2, h3, h4 { /* Added h4 */
+            color: var(--primary); /* Use primary color for headers */
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+             text-align: center;
+             font-size: 2.2rem;
+             padding-bottom: 0.5rem;
+             border-bottom: 3px solid var(--accent); /* Accent color border */
+             display: inline-block; /* Allows border to fit content */
+             margin-bottom: 2.5rem; /* More space below heading */
+        }
+        /* Center the H2 headings */
+        section > h2 {
+             display: block; /* Override inline-block for centering */
+             width: fit-content; /* Adjust width to content */
+             margin-left: auto;
+             margin-right: auto;
+        }
+
+        /* Style for Category Subheadings (h4) */
+        .category-title {
+            font-size: 1.6rem;
+            margin-top: 2.5rem; /* Space above category title */
+            margin-bottom: 1.5rem; /* Space below category title */
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid var(--primary); /* Primary color border */
+            color: var(--primary);
+            display: inline-block;
+        }
+        /* Ensure category titles are not centered like h2 */
+        section > .category-title {
+             display: block;
+             width: auto;
+             margin-left: 0;
+             margin-right: 0;
+             text-align: left;
+        }
+
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        section {
+            padding: 4rem 2rem; /* Consistent padding for sections */
+        }
+
+        .container {
+             max-width: 1100px;
+             margin: 0 auto;
+             padding: 0 1rem; /* Padding for smaller screens */
+        }
+
+
+        /* Header/Navigation */
+        header {
+            background: var(--light);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        header .container {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none; /* Hidden by default */
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+
+        /* Hero Section */
+        #hero {
+            background: var(--primary);
+            color: var(--light);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh; /* Make hero section taller */
+        }
+
+        #hero h1 {
+            font-size: 3rem; /* Larger heading */
+            margin-bottom: 0.5rem;
+            color: var(--light); /* White heading */
+        }
+         #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px; /* Limit width of subtitle */
+        }
+
+        .hero-image img {
+            width: 150px; /* Adjust size */
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--light); /* White border */
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--light);
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #ff4f4f; /* Slightly darker accent */
+            transform: translateY(-3px);
+            color: var(--light);
+        }
+
+
+        /* About Section */
+        #about {
+            background: var(--light); /* White background for contrast */
+        }
+        #about .container {
+             max-width: 800px; /* Limit width for readability */
+        }
+         #about p {
+            font-size: 1.1rem;
+            color: #555; /* Slightly lighter text color */
+            margin-bottom: 1rem;
+            text-align: center; /* Center align text */
+        }
+
+
+        /* Skills Section */
+        #skills {
+            background: var(--bg-light); /* Light gray background */
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+        }
+         .skill-category h3 i {
+             margin-right: 0.8rem;
+             color: var(--accent); /* Icon color */
+         }
+
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .skills-list li {
+             background-color: #e9ecef; /* Light background for skill items */
+             color: var(--dark);
+             padding: 0.5rem 1rem;
+             margin: 0.5rem 0;
+             border-radius: 20px; /* Pill shape */
+             font-size: 0.95rem;
+             display: inline-block; /* Allow items to wrap */
+             margin-right: 0.5rem;
+             border: 1px solid #ced4da; /* Subtle border */
+        }
+
+
+        /* Projects Section */
+        #projects {
+            background: var(--light); /* White background */
+        }
+
+        /* Grid specific for project cards within a category */
+        .projects-category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem; /* Space below each category grid */
+        }
+
+        .project-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 0; /* Remove padding to allow image to fill top */
+            margin: 0; /* Remove margin, gap handles spacing */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden; /* Keep image corners rounded */
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+
+        .project-image img {
+            width: 100%;
+            height: 200px; /* Fixed height for images */
+            object-fit: cover; /* Cover the area */
+            display: block;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1; /* Allow content to fill space */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 { /* Changed from h3 to h5 for card title */
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary); /* Ensure card title color */
+        }
+
+        .project-date {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: #555;
+            flex-grow: 1; /* Push links to bottom */
+            margin-bottom: 1rem;
+        }
+
+        .project-links a {
+            margin-right: 1rem;
+            font-weight: 500;
+             display: inline-block; /* Ensure links are block level */
+             margin-top: auto; /* Push links to the bottom */
+        }
+         .project-links a i {
+             margin-right: 0.3rem;
+         }
+
+        /* Participation/Activities Section */
+        #participation {
+             background: var(--bg-light); /* Light background */
+        }
+        /* Using project card style for activities */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+
+        /* Education Section */
+        #education {
+             background: var(--bg-light);
+        }
+        .education-entry {
+             background: var(--light);
+             padding: 1.5rem;
+             border-radius: 10px;
+             margin-bottom: 1.5rem;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+             display: flex;
+             align-items: flex-start; /* Align icon with top */
+             gap: 1.5rem;
+        }
+        .education-entry i {
+             font-size: 2rem;
+             color: var(--primary);
+             margin-top: 0.2rem; /* Align icon slightly */
+        }
+        .education-details h3 {
+             font-size: 1.4rem;
+             margin-bottom: 0.3rem;
+        }
+        .education-details p {
+             margin-bottom: 0.2rem;
+             color: #555;
+        }
+         .education-details .date {
+             font-size: 0.9rem;
+             color: #777;
+         }
+
+
+        /* Certifications Section */
+        #certs { /* Renamed from #certifications */
+            background: var(--light); /* White background */
+        }
+
+        /* Grid specific for cert cards within a category */
+        .certs-category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem; /* Space below each category grid */
+        }
+
+        .cert-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cert-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .cert-card h3 { /* Changed from h3 to h5 for card title */
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary); /* Ensure card title color */
+        }
+        .cert-card p {
+             font-size: 0.9rem;
+             color: #777;
+        }
+         /* Optional: Add icons to cert cards */
+         .cert-card i {
+             font-size: 2.5rem;
+             color: var(--accent);
+             margin-bottom: 1rem;
+         }
+
+
+        /* Contact Section */
+        #contact {
+            background: var(--primary); /* Primary background */
+            color: var(--light); /* Light text */
+            text-align: center;
+        }
+        #contact h2 {
+             color: var(--light); /* Light heading */
+             border-bottom-color: var(--accent); /* Accent border */
+        }
+        #contact p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .contact-links a {
+            color: var(--light);
+            font-size: 2.5rem; /* Larger icons */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .contact-links a:hover {
+            color: var(--accent);
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #aaa; /* Lighter gray for footer text */
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer p {
+             margin-bottom: 0.3rem;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+             /* Adjust header for mobile */
+             nav ul {
+                 display: none; /* Hide nav links */
+                 flex-direction: column;
+                 position: absolute;
+                 top: 60px; /* Adjust based on header height */
+                 left: 0;
+                 width: 100%;
+                 background: var(--light);
+                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                 padding: 1rem 0;
+             }
+             nav ul.active {
+                 display: flex; /* Show when active */
+             }
+              nav ul li {
+                 margin: 0.5rem 0;
+                 text-align: center;
+             }
+             .menu-toggle {
+                 display: block; /* Show hamburger icon */
+             }
+
+            #hero h1 {
+                font-size: 2.2rem;
+            }
+             #hero p {
+                 font-size: 1rem;
+             }
+             .hero-image img {
+                 width: 120px;
+                 height: 120px;
+             }
+
+            section {
+                padding: 3rem 1rem; /* Reduce padding on mobile */
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+             /* Adjust category title size on mobile */
+            .category-title {
+                 font-size: 1.4rem;
+            }
+
+            .skills-grid, .projects-category-grid, .certs-category-grid, .activities-grid { /* Updated grids */
+                grid-template-columns: 1fr; /* Stack grids on mobile */
+                gap: 1.5rem;
+            }
+
+            .contact-links a {
+                 font-size: 2rem; /* Smaller icons on mobile */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Md. Takrim Ul Alam</div>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#participation">Participation</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certs">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <div class="hero-image">
+                <img src="takrim-image.png" alt="Md. Takrim Ul Alam">
+            </div>
+            <h1>Md. Takrim Ul Alam</h1>
+            <p>Information and Communication Engineering Student | Aspiring Developer</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    I am a passionate and dedicated student pursuing a Bachelor of Science in Information and Communication Engineering at the University of Rajshahi, expecting to graduate in 2025. Based in Rajshahi, Bangladesh, I have a strong foundation in programming, web development, and an emerging interest in machine learning and cyber security.
+                </p>
+                <p>
+                    I enjoy tackling challenging problems, developing practical solutions, and continuously learning new technologies. My goal is to leverage my skills to contribute meaningfully to innovative projects in the tech industry.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i>Programming Languages</h3>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>C</li>
+                            <li>Bash</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-globe"></i>Web Development</h3>
+                        <ul class="skills-list">
+                            <li>Django</li>
+                            <li>Flask</li>
+                            <li>React</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-brain"></i>Machine Learning</h3>
+                        <ul class="skills-list">
+                            <li>ML</li>
+                            <li>DL</li>
+                            <li>Computer Vision</li>
+                            <li>OpenCV</li>
+                            <li>YOLO</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cogs"></i>Other Skills</h3>
+                        <ul class="skills-list">
+                            <li>GIT</li>
+                            <li>Cyber Security</li>
+                            <li>Linux OS</li>
+                            <li>Networking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <br>
+                <h4 class="category-title">Web Development</h4>
+                <div class="projects-category-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="twifi.png" alt="TWIFI Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>TWIFI</h3>
+                            <p class="project-date">Jun 26, 2023</p>
+                            <p class="project-description">A web application providing a User Interface to manage WiFi access and usage within my university residence.</p>
+                            <div class="project-links">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="ruiceaa.png" alt="ICE Alumi Web Dev project">
+                        </div>
+                        <div class="project-content">
+                            <h3>ICE Alumi Web Development Project for University of Rajshahi</h3>
+                            <p class="project-date">Date</p>
+                            <p class="project-description">Directed and distributed project between Frontend Leader and Backend Leader. Integrated, Deployed and also programmed backend</p>
+                            <div class="project-links">
+                                <a href="https://ice-alumni-webdev.vercel.app/">view</a>
+                                <a href="https://iceru.pythonanywhere.com/">backend</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="category-title">AI & Machine Learning</h4>
+                <div class="projects-category-grid">
+                    <div class="project-card">
+                         <div class="project-image">
+                            <img src="tictactoeai.png" alt="TicTacToe AI Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>TicTacToe with AI</h3>
+                            <p class="project-date">Sep 30, 2022</p>
+                            <p class="project-description">Developed a TicTacToe game featuring an AI opponent with adaptive learning capabilities. The AI improves its strategy after each game.</p>
+                             <div class="project-links">
+                                 </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                           <img src="dengue.png" alt="Dengue ML,DL classification">
+                       </div>
+                    <div class="project-content">
+                        <h3>Machine Learning and Deep Learning for Dengue Classification</h3>
+                        <p class="project-date">Mar 02, 2025</p>
+                        <p class="project-description">Handling Imbalanced Datasets
+                            with Real-World Positive Cases. Cleaned data, visualized them, trained model and analyzed the result.</p>
+                         <div class="project-links">
+                             </div>
+                    </div>
+                    </div>
+                    </div>
+                 <h4 class="category-title">Cyber Security</h4>
+                <div class="projects-category-grid">
+                     <div class="project-card">
+                         <div class="project-image">
+                             <img src="vulnerable.png" alt="Vulnerability Analysis Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Vulnerability Analysis</h3>
+                            <p class="project-date">Jan 13, 2023</p>
+                            <p class="project-description">Conducted a security analysis focusing on a sample of Facebook users in Bangladesh. Identified and reported vulnerabilities.</p>
+                             <div class="project-links">
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+
+                 <h4 class="category-title">Automation & Scripting</h4>
+                <div class="projects-category-grid">
+                     <div class="project-card">
+                        <div class="project-image">
+                            <img src="result.png" alt="Shell App - Result Fetcher">
+                       </div>
+                       <div class="project-content">
+                           <h3>Shell App (Result Fetcher)</h3>
+                           <p class="project-date">Feb 1, 2021</p>
+                           <p class="project-description">Developed an app to fetch a board exam result by bypassing captcha.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/takrim1999/hsc">View Repository</a>
+                                </div>
+                       </div>
+                   </div>
+                    <div class="project-card">
+                         <div class="project-image">
+                            <img src="shellfb.png" alt="Facebook Shell App Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Facebook Shell App</h3>
+                            <p class="project-date">Jun 7, 2021</p>
+                            <p class="project-description">Created a shell application to automate various Facebook actions using the Scrapy framework.</p>
+                             <div class="project-links">
+                                 </div>
+                        </div>
+                    </div>
+                    </div>
+
+            </div>
+        </section>
+
+        <section id="participation">
+            <div class="container">
+                <h2>Participation & Activities</h2>
+                <div class="activities-grid"> <div class="project-card"> <div class="project-image">
+                            <img src="foobar1.png" alt="Google Foobar">
+                        </div>
+                        <div class="project-content">
+                            <h3><i class="fab fa-google" style="color: var(--primary); margin-right: 0.5rem;"></i>Google Foobar Challenge</h3>
+                            <!-- <p class="project-date">Date of Event</p> -->
+                            <p class="project-description">Participated in Google's invite-only Foobar challenge, a series of programming puzzles. Successfully solved 5 problems.</p>
+                             <div class="project-links">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="edge.png" alt="Edge Project">
+                        </div>
+                        <div class="project-content">
+                            <h3><a href="https://edge.gov.bd/" style="color: #2a2a72;">Edge Project</a></h3>
+                            <p class="project-date">21 Oct, 2024 - 30 Dec, 2025</p>
+                            <p class="project-description">A project launched by GOB to fine tune technical skills among school, college, university students. Attented to learn python and AI basics</p>
+                             <div class="project-links">
+                                </div>
+                        </div>
+                    </div>
+                     <div class="project-card">
+                        <div class="project-image">
+                            <img src="learnathon.jpeg" alt="Learnathon 3.0">
+                        </div>
+                        <div class="project-content">
+                            <h3><a href="https://learnathon.geeky.solutions/" style="color: #2a2a72;">Leranathon 3.0 by Geeky Solution</a></h3>
+                            <p class="project-date">20 Dec, 2024 - Present</p>
+                            <p class="project-description">This is a developer hunt program conducted by geeky solution and 3.0 is sponsored by Brainstation 23. I am leading the team SegFault to create our online judge CodeSirius</p>
+                             <div class="project-links">
+                                </div>
+                        </div>
+                    </div>
+                     <div class="project-card">
+                        <div class="project-image">
+                            <img src="bdset.jpg" alt="BDSET">
+                        </div>
+                        <div class="project-content">
+                            <h3><a href="https://bhtpa.gov.bd/site/page/db916efe-105a-4301-acba-2dcfd02fac15/BDSET-Project" style="color: #2a2a72;">BDSET Project</a></h3>
+                            <p class="project-date">20 Jan, 2025 - Present</p>
+                            <p class="project-description">Bangladesh-Bharot Digital Service & Employment Training Center. Learning about AI, ML, DL, AR, VR, MR, XR</p>
+                             <div class="project-links">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+             <div class="container">
+                 <h2>Education</h2>
+                 <div class="education-entry">
+                     <i class="fas fa-university"></i>
+                     <div class="education-details">
+                         <h3>University of Rajshahi</h3>
+                         <p>Bachelor of Science in Information and Communication Engineering</p>
+                         <p class="date">Rajshahi, Bangladesh | Expected Graduation: 2025</p>
+                     </div>
+                 </div>
+                 <div class="education-entry">
+                     <i class="fas fa-school"></i>
+                     <div class="education-details">
+                         <h3>Notre Dame College</h3>
+                         <p>Higher Secondary School Certificate (HSC), Science</p>
+                         <p class="date">Dhaka, Bangladesh | Graduated: 2018</p>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <section id="certs"> <div class="container">
+                <h2>Certifications</h2>
+                <br>
+                <h4 class="category-title">Automation</h4>
+                 <div class="certs-category-grid">
+                     <div class="cert-card">
+                        <!-- <i class="fas fa-robot"></i> -->
+                        <div class="project-image">
+                            <img src="google.png" alt="BDSET">
+                        </div>
+                        <h3>Coursera certificates from python automation course by google</h3>
+                        <ul class="container">
+                            <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/professional-cert/FEDM8NNZLSQ2">Google IT Automation Professional Certificate</a></li>
+                            <div class="container">
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/DRMJTB2QF4TA">Crash Course on Python</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/7TV2MKMZVL5D">Using Python to Interact with the Operating System</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/BL8WT6KEHKEU">Troubleshooting and Debugging Techniques</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://oursera.org/verify/DEHKLYCBJH2N">Conﬁguration Management and the Cloud</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/EECV2X68WG2V">Automating Real-World Tasks with Python</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                     <div class="cert-card">
+                        <div class="project-image">
+                            <img src="coursera.png" alt="BDSET">
+                        </div>
+                        <h3>Coursera Guided Project on Bash</h3>
+                        <ul class="container">
+                            <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/TT2G68YKPSX7">Automation Scripts Using Bash</a></li>
+                        </ul>
+                    </div>
+                    </div>
+
+                 <h4 class="category-title">Cyber Security & IT Support</h4>
+                 <div class="certs-category-grid">
+
+                    <div class="cert-card">
+                        <div class="project-image">
+                            <img src="google.png" alt="BDSET">
+                        </div>
+                        <h3>IT Support Specialization offered by google</h3>
+                        <ul class="container">
+                            <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/professional-cert/MNZ8SWKYC8TS">Google IT Support</a></li>
+                            <div class="container">
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/ZPLPB5ZESYC4">Technical Support Fundamentals</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/UN9YU92F2AKX">The Bits and Bytes of Computer Networking</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/9RMZXGJDJ467">Operating Systems and You: Becoming a Power User</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/V8N24MUZGW4H">System Administration and IT Infrastructure Services</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/M55CYLYNNVF9">IT Security: Defense against the digital dark arts</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="cert-card">
+                        <div class="project-image">
+                            <img src="google.png" alt="BDSET">
+                        </div>
+                        <h3>Networks and Network Security course by Google</h3>
+                        <ul class="container">
+                            <div class="container">
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/XMYNVBFTVPRP">Foundations of Cybersecurity</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/MVUY2TDQ7ND9">Play It Safe: Manage Security Risks</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="http://coursera.org/verify/PK7T9J99354W">Connect and Protect: Networks and Network Security</a></li>
+                            <li style="text-align: left; list-style:circle"><a target="_blank" href="http://coursera.org/verify/KQEMM5E8XSSB">Tools of the Trade: Linux and SQL</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    </div>
+
+                 <h4 class="category-title">Programming Languages</h4>
+                 <div class="cert-card">
+                    <div class="project-image">
+                        <img src="michigan.jpg" alt="BDSET">
+                    </div>
+                    <h3>Python Programming Specialization offered by University of Michigan</h3>
+                    <ul class="container">
+                        <li style="list-style:square; text-align: left; font-weight: bolder;"><a target="_blank" href="https://coursera.org/verify/specialization/KNEZVNSFSDWJ">Python for Everybody</a></li>
+                        <div class="container">
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/LJJT3GYY9J7H">Programming for Everybody (Getting Started with Python)</a></li>
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/3W84KSCZ6C8E">Python Data Structures</a></li>
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/3Z5FNB9MKKDH">Using Python to Access Web Data</a></li>
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/7U4Q3NJXWBNY">Using Databases with Python</a></li>
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/WVFPXWJHJSUL">Capstone: Retrieving, Processing, and Visualizing Data with Python</a></li>
+                        </div>
+                    </ul>
+                </div>
+
+                <h4 class="category-title">Mathematics</h4>
+                 <div class="cert-card">
+                    <div class="project-image">
+                        <img src="sandiego.png" alt="BDSET">
+                    </div>
+                    <h3>Discrete Mathematics for Computer Science Specialization offered by University of California, San Diego</h3>
+                    <ul class="container">
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/W24KQ74M3NN7">Mathematical Thinking in Computer Science</a></li>
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/MLFG959H8N2B">Combinatorics and Probability</a></li>
+                        <li style="text-align: left; list-style:circle"><a target="_blank" href="https://coursera.org/verify/KMYBBW6XSJD6">Introduction to Graph Theory</a></li>
+                    </ul>
+                </div>
+
+                 <!-- <h4 class="category-title">Web Development</h4>
+                 <div class="certs-category-grid">
+                     <div class="cert-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Web Dev Certificate</h3>
+                        <p>Add details here</p>
+                    </div>
+                    </div>
+
+                 <h4 class="category-title">AI & Machine Learning</h4>
+                 <div class="certs-category-grid">
+                     <div class="cert-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI Certificate</h3>
+                        <p>Add details here</p>
+                    </div>
+                    </div> -->
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>
+                    Interested in collaborating or have any questions? Feel free to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:takrimulalom@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/takrim1999" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/takrim1999" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                     </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Md. Takrim Ul Alam. All rights reserved.</p>
+            <p>Built with HTML & CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        if (menuButton && navLinks) {
+            menuButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active'); // Toggles the .active class to show/hide
+            });
+        }
+    </script>
+
+</body>
+</html>
